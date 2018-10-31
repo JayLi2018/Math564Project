@@ -28,24 +28,6 @@ class NbaGrabberSpider(scrapy.Spider):
 			va = player.xpath('.//td[13]/text()').extract_first()
 			ewa = player.xpath('.//td[14]/text()').extract_first()
 
-			# print('\n')			
-			# print(rk)
-			# print(player_name)
-			# print(team)
-			# print(gp)
-			# print(mpg)
-			# print(ts)
-			# print(ts)
-			# print(ast)
-			# print(to)
-			# print(usg)
-			# print(orr)
-			# print(drr)
-			# print(rebr)
-			# print(per)
-			# print(va)
-			# print(ewa)
-			# print('\n')
 			
 			yield{'RK':rk,
 			'PLAYER':player_name,
