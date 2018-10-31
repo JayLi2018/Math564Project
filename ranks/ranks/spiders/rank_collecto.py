@@ -4,8 +4,8 @@ import scrapy
 
 class RankCollectoSpider(scrapy.Spider):
 	name = 'rank_collecto'
-	allowed_domains = ['www.espn.com/nba/standings/_/season/2018/group/league']
-	start_urls = ['http://www.espn.com/nba/standings/_/season/2018/group/league/']
+	# allowed_domains = ['www.espn.com/nba/standings/_/season/2018/group/league']
+	start_urls = ['http://www.espn.com/nba/standings/_/season/2014/group/league/']
 
 	def parse(self, response):
 		team_names = response.xpath('//td[@class = "v-top"]/table/tbody/tr')
