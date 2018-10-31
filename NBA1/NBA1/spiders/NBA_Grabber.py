@@ -5,7 +5,8 @@ import scrapy
 class NbaGrabberSpider(scrapy.Spider):
 	name = 'NBA_Grabber'
 	# allowed_domains = ['insider.espn.com/nba/hollinger/statistics/_/year/2017']
-	start_urls = ['http://insider.espn.com/nba/hollinger/statistics/_/year/2014/']
+	start_urls = ['http://insider.espn.com/nba/hollinger/statistics/_/year/2018/'
+	               ]
 
 	def parse(self, response):
 		players = response.xpath('.//tr[starts-with(@class, "oddrow")]|.//tr[starts-with(@class, "evenrow")]')
@@ -14,7 +15,7 @@ class NbaGrabberSpider(scrapy.Spider):
 
 			rk = player.xpath('.//td[1]/text()').extract_first()
 			player_name = player.xpath('.//td[2]/a/text()').extract_first()
-			team = player.xpath('.//td[2]/text()').extract()[0].split(", ")[1]  
+			teams = player.xpath('.//td[2]/text()').extract()[0].split(", ")[1]  
 			gp = player.xpath('.//td[3]/text()').extract_first() 
 			mpg = player.xpath('.//td[4]/text()').extract_first()
 			ts = player.xpath('.//td[5]/text()').extract_first()
@@ -27,24 +28,25 @@ class NbaGrabberSpider(scrapy.Spider):
 			per = player.xpath('.//td[@class="sortcell"]/text()').extract_first()
 			va = player.xpath('.//td[13]/text()').extract_first()
 			ewa = player.xpath('.//td[14]/text()').extract_first()
-
 			
-			yield{'RK':rk,
-			'PLAYER':player_name,
-			'TEAM':team,
-			'GP':gp,
-			'MPG':mpg,
-			'TS':ts,
-			'AST':ast,
-			'TO':to,
-			'USG':usg,
-			'ORR':orr,
-			'DRR':drr,
-			'REBR':rebr,
-			'PER':per,
-			'VA':va,
-			'EWA':ewa
-			}
+			teams_list = teams.split("/")  # there are some players get traded 
+			for team in teams_list:
+				yield{'RK':rk,
+				'PLAYER':player_name,
+				'TEAM':team,
+				'GP':gp,
+				'MPG':mpg,
+				'TS':ts,
+				'AST':ast,
+				'TO':to,
+				'USG':usg,
+				'ORR':orr,
+				'DRR':drr,
+				'REBR':rebr,
+				'PER':per,
+				'VA':va,
+				'EWA':ewa
+				}
 
 		next_page_url_list = response.xpath('//div[@class="controls"]/a[@rel = "nofollow"]/@href').extract()
 		if(len(next_page_url_list) ==1):
