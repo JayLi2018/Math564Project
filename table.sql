@@ -30,8 +30,7 @@ Season varchar(20),
 );
 
 # input data
-\copy NBA(Season,TEAM,win,loss,pct,home,away,div,conf,ppg,opp_ppg,diff,RK,PLAYER,GP,MPG,TS,AST,Tur_Ratio,USG,ORR,DRR,REBR,PER,VA,EWA)
- FROM '/home/chenjie/Desktop/Math564Project/table.csv' DELIMITER ',' CSV HEADER
+\copy NBA(Season,TEAM,win,loss,pct,home,away,div,conf,ppg,opp_ppg,diff,RK,PLAYER,GP,MPG,TS,AST,Tur_Ratio,USG,ORR,DRR,REBR,PER,VA,EWA) FROM '/home/chenjie/Desktop/Math564Project/final_table.csv' DELIMITER ',' CSV HEADER
 
 # calculate the product of minutes played(mpg*gp)
 create view add_MTP as 
@@ -50,12 +49,10 @@ where Rank <=8
 
 # get the log((team_PER)^2)
 create view get_relationship as 
-select season,team,pct as win_ratio, log(sum(min_times_per)*sum(min_times_per)) as sum_min_times_per
+select season,team,pct as win_ratio, log(sum(min_times_per)*sum(min_times_per)) as log_of_sum_min_times_per_square
 from sorted_8
 group by season,team,win_ratio
 order by season,team
-
-
 
 
 
