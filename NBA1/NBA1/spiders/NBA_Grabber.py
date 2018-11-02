@@ -5,8 +5,7 @@ import scrapy
 class NbaGrabberSpider(scrapy.Spider):
 	name = 'NBA_Grabber'
 	# allowed_domains = ['insider.espn.com/nba/hollinger/statistics/_/year/2017']
-	start_urls = ['http://insider.espn.com/nba/hollinger/statistics/_/year/2018/'
-	               ]
+	start_urls = ['http://insider.espn.com/nba/hollinger/statistics/_/year/2014/qualified/false']
 
 	def parse(self, response):
 		players = response.xpath('.//tr[starts-with(@class, "oddrow")]|.//tr[starts-with(@class, "evenrow")]')
