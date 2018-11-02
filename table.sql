@@ -54,8 +54,12 @@ from sorted_12
 group by season,team,win_ratio
 
 
-\copy (select * from get_relationship) to '/home/chenjie/Desktop/Math564Project/draft_table.csv' DELIMITER ',' CSV HEADER;
+\copy (select * from get_relationship_12) to '/home/chenjie/Desktop/Math564Project/12_players.csv' DELIMITER ',' CSV HEADER;
 
 
-
-
+sSELECT * FROM
+(
+SELECT *, MPG*GP as sorting_standard,Rank()over (Partition by Season,TEAM ORDER BY MPG*GP DESC) as Rank 
+FROM add_MTP
+) rs
+where Rank <=10
