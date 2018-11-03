@@ -1,0 +1,17 @@
+---
+title: "Logistic_Piot"
+author: "Chenjie Li"
+date: "November 2, 2018"
+output: pdf_document
+---
+
+```{r}
+raw <- read.csv('/home/chenjie/Desktop/Math564Project/12_players.csv')
+```
+
+```{r}
+logistic_total <-glm(raw$win_ratio~ raw$team_PER,data = raw, family = binomial)
+summary(logistic_total)
+plot(raw$team_PER,raw$win_ratio,xlab = 'team_PER', ylab = 'win_ratio', main = '2014 - 2017 Win_Ratio against team_PER - 12 Players') + 
+curve(predict(logistic_total,data.frame(bodysize=x),type="resp"),add=TRUE)+text(win_ratio~ team_PER, labels=raw$team,data=raw, cex=0.3,pos = 4)
+```
