@@ -1,7 +1,7 @@
 # create table
-CREATE TABLE NBA
+CREATE TABLE ESPN
 (
-Season varchar(20),
+Season INT,
  TEAM varchar(20),
  win FLOAT,
  loss FLOAT,
@@ -26,11 +26,11 @@ Season varchar(20),
  REBR FLOAT,
  PER FLOAT,
  VA FLOAT,
- EWA FLOAT,
+ EWA FLOAT
 );
 
 # input data
-\copy NBA(Season,TEAM,win,loss,pct,home,away,div,conf,ppg,opp_ppg,diff,RK,PLAYER,GP,MPG,TS,AST,Tur_Ratio,USG,ORR,DRR,REBR,PER,VA,EWA) FROM '/home/chenjie/Desktop/Math564Project/all_merged_table.csv' DELIMITER ',' CSV HEADER
+\copy ESPN(Season,TEAM,win,loss,pct,home,away,div,conf,ppg,opp_ppg,diff,RK,PLAYER,GP,MPG,TS,AST,Tur_Ratio,USG,ORR,DRR,REBR,PER,VA,EWA) FROM '/home/chenjie/Desktop/Math564Project/ESPN.csv' DELIMITER ',' CSV HEADER
 
 # calculate the product of minutes played(mpg*gp)
 create view add_MTP as 
@@ -63,3 +63,6 @@ SELECT *, MPG*GP as sorting_standard,Rank()over (Partition by Season,TEAM ORDER 
 FROM add_MTP
 ) rs
 where Rank <=10
+
+
+\copy (select  count(*),player from missing_player group by player order by player) to '/home/chenjie/Desktop/Math564Project/missing_players.csv'
