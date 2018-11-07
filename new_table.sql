@@ -42,9 +42,9 @@ CREATE TABLE NBA
  diff FLOAT,
  RK INT,
  TS FLOAT,
- AST FLOAT,
- TO_Ratio FLOAT,
- USG FLOAT,
+ AST_Ratio FLOAT,
+ Turnover_Ratio FLOAT,
+ Usage_Rate FLOAT,
  ORR FLOAT,
  DRR FLOAT,
  REBR FLOAT,
@@ -53,7 +53,7 @@ CREATE TABLE NBA
  EWA FLOAT
 );
 
-
+\copy NBA(Season,Player,position,age,Team,gp,gs,mpg,FG,FGa,FGp,Three_PPG,Three_PA,Three_PP,Two_PPG,Two_PA,Two_PP,FT,FTa,FTp,orb,drb,trb,ast,stl,blk,tov,PF,ppg,win,loss,pct,home,away,div,conf,team_ppg,opp_ppg,diff,RK,TS,AST_Ratio,Turnover_Ratio,Usage_Rate,ORR,DRR,REBR,PER,VA,EWA) from '/home/chenjie/Desktop/Math564Project/merge_espn_BRef.csv' DELIMITER ',' CSV HEADER
 
 
 
@@ -77,7 +77,7 @@ where Rank <=12
 
 # get the log((team_PER)^2)
 create view get_relationship_12 as 
-select season,team,pct as win_ratio, log(sum(min_times_per)*sum(min_times_per)) as log_sum
+select season,team,pct as win_ratio, log(sum(mpg*per)+sum(mpg*per)) as log_sum
 from sorted_12
 group by season,team,win_ratio
 
@@ -91,3 +91,14 @@ SELECT *, MPG*GP as sorting_standard,Rank()over (Partition by Season,TEAM ORDER 
 FROM add_MTP
 ) rs
 where Rank <=10
+
+
+
+select season, player, position, age, team, pct, (fg + ast)/(fga-orb + ast +tov) as Offensive_Efficiency
+from NBA 
+where (fga-orb + ast +tov) !=0
+order by season,player, team
+
+select season,team,pct as win_ratio, log(sum(gp*mpg*per)*sum(gp*mpg *per)) as log_sum 
+from sorted_12 
+group by season,team,win_ratio
