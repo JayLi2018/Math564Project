@@ -85,16 +85,14 @@ group by season,team,win_ratio
 \copy (select * from get_relationship_12) to '/home/chenjie/Desktop/Math564Project/12_players.csv' DELIMITER ',' CSV HEADER;
 
 
-sSELECT * FROM
+SELECT * FROM
 (
 SELECT *, MPG*GP as sorting_standard,Rank()over (Partition by Season,TEAM ORDER BY MPG*GP DESC) as Rank 
 FROM add_MTP
 ) rs
 where Rank <=10
 
-
-
-select season, player, position, age, team, pct, (fg + ast)/(fga-orb + ast +tov) as Offensive_Efficiency
+select season, player, position, age, team, pct, MPG*gp as sorting_standard,(fg + ast)/(fga-orb + ast +tov) as Offensive_Efficiency
 from NBA 
 where (fga-orb + ast +tov) !=0
 order by season,player, team

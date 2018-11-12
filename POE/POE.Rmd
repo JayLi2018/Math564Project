@@ -1,0 +1,401 @@
+---
+title: "Find_Best_Number_Players"
+author: "Chenjie Li"
+date: "November 9, 2018"
+output:
+  pdf_document: default
+  html_document: default
+---
+## The goal of this session is to find how many players' efficiency combined would be the best correlation between PE_Combined and pct.
+
+```{r}
+ten <- read.csv('/home/chenjie/Desktop/Math564Project/POE/10_poe.csv')
+nine <- read.csv('/home/chenjie/Desktop/Math564Project/POE/9_poe.csv')
+eight <- read.csv('/home/chenjie/Desktop/Math564Project/POE/8_poe.csv')
+seven <- read.csv('/home/chenjie/Desktop/Math564Project/POE/7_poe.csv')
+six <-read.csv('/home/chenjie/Desktop/Math564Project/POE/6_poe.csv')
+five <-read.csv('/home/chenjie/Desktop/Math564Project/POE/5_poe.csv')
+four <-read.csv('/home/chenjie/Desktop/Math564Project/POE/4_poe.csv')
+three <-read.csv('/home/chenjie/Desktop/Math564Project/POE/3_poe.csv')
+two <-read.csv('/home/chenjie/Desktop/Math564Project/POE/2_poe.csv')
+one <-read.csv('/home/chenjie/Desktop/Math564Project/POE/1_poe.csv')
+
+```
+
+```{r}
+ten$pct <- ten$pct*100
+ten_14 <- ten[ten$season == 2014,]
+plot(ten_14$sum_poe,ten_14$pct)+text(ten_14$pct ~ ten_14$sum_poe, labels=ten_14$team,data=ten_14, cex=0.3,pos = 4)
+ten_md_14 <- lm(ten_14$pct ~ ten_14$sum_poe)
+summary(ten_md_14)
+
+```
+
+```{r}
+ten_15 <- ten[ten$season == 2015,]
+plot(ten_15$sum_poe,ten_15$pct)+text(ten_15$pct ~ ten_15$sum_poe, labels=ten_15$team,data=ten_15, cex=0.3,pos = 4)
+ten_md_15 <- lm(ten_15$pct ~ ten_15$sum_poe)
+summary(ten_md_15)
+```
+
+```{r}
+ten_16 <- ten[ten$season == 2016,]
+plot(ten_16$sum_poe,ten_16$pct)+text(ten_16$pct ~ ten_16$sum_poe, labels=ten_16$team,data=ten_16, cex=0.3,pos = 4)
+ten_md_16 <- lm(ten_16$pct ~ ten_16$sum_poe)
+summary(ten_md_16)
+```
+
+```{r}
+ten_17 <- ten[ten$season == 2017,]
+plot(ten_17$sum_poe,ten_17$pct)+text(ten_17$pct ~ ten_17$sum_poe, labels=ten_17$team,data=ten_17, cex=0.3,pos = 4)
+ten_md_17 <- lm(ten_17$pct ~ ten_17$sum_poe)
+summary(ten_md_17)
+```
+
+```{r}
+plot(ten$sum_poe,ten$pct)
+ten_md <- lm(ten$pct ~ ten$sum_poe)
+summary(ten_md)
+```
+
+## Nine Players:
+```{r}
+nine$pct <- nine$pct*100
+nine_14 <- nine[nine$season == 2014,]
+plot(nine_14$sum_poe,nine_14$pct)+text(nine_14$pct ~ nine_14$sum_poe, labels=nine_14$team,data=nine_14, cex=0.3,pos = 4)
+nine_md_14 <- lm(nine_14$pct ~ nine_14$sum_poe)
+summary(nine_md_14)
+
+```
+
+```{r}
+nine_15 <- nine[nine$season == 2015,]
+plot(nine_15$sum_poe,nine_15$pct)+text(nine_15$pct ~ nine_15$sum_poe, labels=nine_15$team,data=nine_15, cex=0.3,pos = 4)
+nine_md_15 <- lm(nine_15$pct ~ nine_15$sum_poe)
+summary(nine_md_15)
+```
+
+```{r}
+nine_16 <- nine[nine$season == 2016,]
+plot(nine_16$sum_poe,nine_16$pct)+text(nine_16$pct ~ nine_16$sum_poe, labels=nine_16$team,data=nine_16, cex=0.3,pos = 4)
+nine_md_16 <- lm(nine_16$pct ~ nine_16$sum_poe)
+summary(nine_md_16)
+```
+
+```{r}
+nine_17 <- nine[nine$season == 2017,]
+plot(nine_17$sum_poe,nine_17$pct)+text(nine_17$pct ~ nine_17$sum_poe, labels=nine_17$team,data=nine_17, cex=0.3,pos = 4)
+nine_md_17 <- lm(nine_17$pct ~ nine_17$sum_poe)
+summary(nine_md_17)
+```
+
+```{r}
+plot(nine$sum_poe,nine$pct)
+nine_md_10 <- lm(nine$pct ~ nine$sum_poe)
+summary(nine_md_10)
+```
+
+## Eight players:
+
+```{r}
+eight$pct <- eight$pct*100
+eight_14 <- eight[eight$season == 2014,]
+plot(eight_14$sum_poe,eight_14$pct)+text(eight_14$pct ~ eight_14$sum_poe, labels=eight_14$team,data=eight_14, cex=0.3,pos = 4)
+eight_md_14 <- lm(eight_14$pct ~ eight_14$sum_poe)
+summary(eight_md_14)
+
+```
+
+```{r}
+eight_15 <- eight[eight$season == 2015,]
+plot(eight_15$sum_poe,eight_15$pct)+text(eight_15$pct ~ eight_15$sum_poe, labels=eight_15$team,data=eight_15, cex=0.3,pos = 4)
+eight_md_15 <- lm(eight_15$pct ~ eight_15$sum_poe)
+summary(eight_md_15)
+```
+
+```{r}
+eight_16 <- eight[eight$season == 2016,]
+plot(eight_16$sum_poe,eight_16$pct)+text(eight_16$pct ~ eight_16$sum_poe, labels=eight_16$team,data=eight_16, cex=0.3,pos = 4)
+eight_md_16 <- lm(eight_16$pct ~ eight_16$sum_poe)
+summary(eight_md_16)
+```
+
+```{r}
+eight_17 <- eight[eight$season == 2017,]
+plot(eight_17$sum_poe,eight_17$pct)+text(eight_17$pct ~ eight_17$sum_poe, labels=eight_17$team,data=eight_17, cex=0.3,pos = 4)
+eight_md_17 <- lm(eight_17$pct ~ eight_17$sum_poe)
+summary(eight_md_17)
+```
+
+```{r}
+plot(eight$sum_poe,eight$pct)
+eight_md_10 <- lm(eight$pct ~ eight$sum_poe)
+summary(eight_md_10)
+```
+
+## Seven players:
+
+```{r}
+seven$pct <- seven$pct*100
+seven_14 <- seven[seven$season == 2014,]
+plot(seven_14$sum_poe,seven_14$pct)+text(seven_14$pct ~ seven_14$sum_poe, labels=seven_14$team,data=seven_14, cex=0.3,pos = 4)
+seven_md_14 <- lm(seven_14$pct ~ seven_14$sum_poe)
+summary(seven_md_14)
+
+```
+
+```{r}
+seven_15 <- seven[seven$season == 2015,]
+plot(seven_15$sum_poe,seven_15$pct)+text(seven_15$pct ~ seven_15$sum_poe, labels=seven_15$team,data=seven_15, cex=0.3,pos = 4)
+seven_md_15 <- lm(seven_15$pct ~ seven_15$sum_poe)
+summary(seven_md_15)
+```
+
+```{r}
+seven_16 <- seven[seven$season == 2016,]
+plot(seven_16$sum_poe,seven_16$pct)+text(seven_16$pct ~ seven_16$sum_poe, labels=seven_16$team,data=seven_16, cex=0.3,pos = 4)
+seven_md_16 <- lm(seven_16$pct ~ seven_16$sum_poe)
+summary(seven_md_16)
+```
+
+```{r}
+seven_17 <- seven[seven$season == 2017,]
+plot(seven_17$sum_poe,seven_17$pct)+text(seven_17$pct ~ seven_17$sum_poe, labels=seven_17$team,data=seven_17, cex=0.3,pos = 4)
+seven_md_17 <- lm(seven_17$pct ~ seven_17$sum_poe)
+summary(seven_md_17)
+```
+
+```{r}
+plot(seven$sum_poe,seven$pct)
+seven_md_10 <- lm(seven$pct ~ seven$sum_poe)
+summary(seven_md_10)
+```
+
+
+## Six players:
+
+```{r}
+six$pct <- six$pct*100
+six_14 <- six[six$season == 2014,]
+plot(six_14$sum_poe,six_14$pct)+text(six_14$pct ~ six_14$sum_poe, labels=six_14$team,data=six_14, cex=0.3,pos = 4)
+six_md_14 <- lm(six_14$pct ~ six_14$sum_poe)
+summary(six_md_14)
+
+```
+
+```{r}
+six_15 <- six[six$season == 2015,]
+plot(six_15$sum_poe,six_15$pct)+text(six_15$pct ~ six_15$sum_poe, labels=six_15$team,data=six_15, cex=0.3,pos = 4)
+six_md_15 <- lm(six_15$pct ~ six_15$sum_poe)
+summary(six_md_15)
+```
+
+```{r}
+six_16 <- six[six$season == 2016,]
+plot(six_16$sum_poe,six_16$pct)+text(six_16$pct ~ six_16$sum_poe, labels=six_16$team,data=six_16, cex=0.3,pos = 4)
+six_md_16 <- lm(six_16$pct ~ six_16$sum_poe)
+summary(six_md_16)
+```
+
+```{r}
+six_17 <- six[six$season == 2017,]
+plot(six_17$sum_poe,six_17$pct)+text(six_17$pct ~ six_17$sum_poe, labels=six_17$team,data=six_17, cex=0.3,pos = 4)
+six_md_17 <- lm(six_17$pct ~ six_17$sum_poe)
+summary(six_md_17)
+```
+
+```{r}
+plot(six$sum_poe,six$pct)
+six_md_10 <- lm(six$pct ~ six$sum_poe)
+summary(six_md_10)
+```
+
+## Five players:
+
+```{r}
+five$pct <- five$pct*100
+five_14 <- five[five$season == 2014,]
+plot(five_14$sum_poe,five_14$pct)+text(five_14$pct ~ five_14$sum_poe, labels=five_14$team,data=five_14, cex=0.3,pos = 4)
+five_md_14 <- lm(five_14$pct ~ five_14$sum_poe)
+summary(five_md_14)
+
+```
+
+```{r}
+five_15 <- five[five$season == 2015,]
+plot(five_15$sum_poe,five_15$pct)+text(five_15$pct ~ five_15$sum_poe, labels=five_15$team,data=five_15, cex=0.3,pos = 4)
+five_md_15 <- lm(five_15$pct ~ five_15$sum_poe)
+summary(five_md_15)
+```
+
+```{r}
+five_16 <- five[five$season == 2016,]
+plot(five_16$sum_poe,five_16$pct)+text(five_16$pct ~ five_16$sum_poe, labels=five_16$team,data=five_16, cex=0.3,pos = 4)
+five_md_16 <- lm(five_16$pct ~ five_16$sum_poe)
+summary(five_md_16)
+```
+
+```{r}
+five_17 <- five[five$season == 2017,]
+plot(five_17$sum_poe,five_17$pct)+text(five_17$pct ~ five_17$sum_poe, labels=five_17$team,data=five_17, cex=0.3,pos = 4)
+five_md_17 <- lm(five_17$pct ~ five_17$sum_poe)
+summary(five_md_17)
+```
+
+```{r}
+plot(five$sum_poe,five$pct)
+five_md_10 <- lm(five$pct ~ five$sum_poe)
+summary(five_md_10)
+```
+
+## four players:
+
+```{r}
+four$pct <- four$pct*100
+four_14 <- four[four$season == 2014,]
+plot(four_14$sum_poe,four_14$pct)+text(four_14$pct ~ four_14$sum_poe, labels=four_14$team,data=four_14, cex=0.3,pos = 4)
+four_md_14 <- lm(four_14$pct ~ four_14$sum_poe)
+summary(four_md_14)
+
+```
+
+```{r}
+four_15 <- four[four$season == 2015,]
+plot(four_15$sum_poe,four_15$pct)+text(four_15$pct ~ four_15$sum_poe, labels=four_15$team,data=four_15, cex=0.3,pos = 4)
+four_md_15 <- lm(four_15$pct ~ four_15$sum_poe)
+summary(four_md_15)
+```
+
+```{r}
+four_16 <- four[four$season == 2016,]
+plot(four_16$sum_poe,four_16$pct)+text(four_16$pct ~ four_16$sum_poe, labels=four_16$team,data=four_16, cex=0.3,pos = 4)
+four_md_16 <- lm(four_16$pct ~ four_16$sum_poe)
+summary(four_md_16)
+```
+
+```{r}
+four_17 <- four[four$season == 2017,]
+plot(four_17$sum_poe,four_17$pct)+text(four_17$pct ~ four_17$sum_poe, labels=four_17$team,data=four_17, cex=0.3,pos = 4)
+four_md_17 <- lm(four_17$pct ~ four_17$sum_poe)
+summary(four_md_17)
+```
+
+```{r}
+plot(four$sum_poe,four$pct)
+four_md_10 <- lm(four$pct ~ four$sum_poe)
+summary(four_md_10)
+```
+
+## three players:
+
+```{r}
+three$pct <- three$pct*100
+three_14 <- three[three$season == 2014,]
+plot(three_14$sum_poe,three_14$pct)+text(three_14$pct ~ three_14$sum_poe, labels=three_14$team,data=three_14, cex=0.3,pos = 4)
+three_md_14 <- lm(three_14$pct ~ three_14$sum_poe)
+summary(three_md_14)
+
+```
+
+```{r}
+three_15 <- three[three$season == 2015,]
+plot(three_15$sum_poe,three_15$pct)+text(three_15$pct ~ three_15$sum_poe, labels=three_15$team,data=three_15, cex=0.3,pos = 4)
+three_md_15 <- lm(three_15$pct ~ three_15$sum_poe)
+summary(three_md_15)
+```
+
+```{r}
+three_16 <- three[three$season == 2016,]
+plot(three_16$sum_poe,three_16$pct)+text(three_16$pct ~ three_16$sum_poe, labels=three_16$team,data=three_16, cex=0.3,pos = 4)
+three_md_16 <- lm(three_16$pct ~ three_16$sum_poe)
+summary(three_md_16)
+```
+
+```{r}
+three_17 <- three[three$season == 2017,]
+plot(three_17$sum_poe,three_17$pct)+text(three_17$pct ~ three_17$sum_poe, labels=three_17$team,data=three_17, cex=0.3,pos = 4)
+three_md_17 <- lm(three_17$pct ~ three_17$sum_poe)
+summary(three_md_17)
+```
+
+```{r}
+plot(three$sum_poe,three$pct)
+three_md_10 <- lm(three$pct ~ three$sum_poe)
+summary(three_md_10)
+```
+
+## two players:
+
+```{r}
+two$pct <- two$pct*100
+two_14 <- two[two$season == 2014,]
+plot(two_14$sum_poe,two_14$pct)+text(two_14$pct ~ two_14$sum_poe, labels=two_14$team,data=two_14, cex=0.3,pos = 4)
+two_md_14 <- lm(two_14$pct ~ two_14$sum_poe)
+summary(two_md_14)
+
+```
+
+```{r}
+two_15 <- two[two$season == 2015,]
+plot(two_15$sum_poe,two_15$pct)+text(two_15$pct ~ two_15$sum_poe, labels=two_15$team,data=two_15, cex=0.3,pos = 4)
+two_md_15 <- lm(two_15$pct ~ two_15$sum_poe)
+summary(two_md_15)
+```
+
+```{r}
+two_16 <- two[two$season == 2016,]
+plot(two_16$sum_poe,two_16$pct)+text(two_16$pct ~ two_16$sum_poe, labels=two_16$team,data=two_16, cex=0.3,pos = 4)
+two_md_16 <- lm(two_16$pct ~ two_16$sum_poe)
+summary(two_md_16)
+```
+
+```{r}
+two_17 <- two[two$season == 2017,]
+plot(two_17$sum_poe,two_17$pct)+text(two_17$pct ~ two_17$sum_poe, labels=two_17$team,data=two_17, cex=0.3,pos = 4)
+two_md_17 <- lm(two_17$pct ~ two_17$sum_poe)
+summary(two_md_17)
+```
+
+```{r}
+plot(two$sum_poe,two$pct)
+two_md_10 <- lm(two$pct ~ two$sum_poe)
+summary(two_md_10)
+```
+
+## one players:
+
+```{r}
+one$pct <- one$pct*100
+one_14 <- one[one$season == 2014,]
+plot(one_14$sum_poe,one_14$pct)+text(ten_14$pct ~ ten_14$sum_poe, labels=ten_14$team,data=ten_14, cex=0.3,pos = 4)
+one_md_14 <- lm(one_14$pct ~ one_14$sum_poe)
+summary(one_md_14)
+
+```
+
+```{r}
+one_15 <- one[one$season == 2015,]
+plot(one_15$sum_poe,one_15$pct)+text(ten_15$pct ~ ten_15$sum_poe, labels=ten_15$team,data=ten_15, cex=0.3,pos = 4)
+one_md_15 <- lm(one_15$pct ~ one_15$sum_poe)
+summary(one_md_15)
+```
+
+```{r}
+one_16 <- one[one$season == 2016,]
+plot(one_16$sum_poe,one_16$pct)+text(ten_16$pct ~ ten_16$sum_poe, labels=ten_16$team,data=ten_16, cex=0.3,pos = 4)
+one_md_16 <- lm(one_16$pct ~ one_16$sum_poe)
+summary(one_md_16)
+```
+
+```{r}
+one_17 <- one[one$season == 2017,]
+plot(one_17$sum_poe,one_17$pct)+text(ten_17$pct ~ ten_17$sum_poe, labels=ten_17$team,data=ten_17, cex=0.3,pos = 4)
+one_md_17 <- lm(one_17$pct ~ one_17$sum_poe)
+summary(one_md_17)
+```
+
+```{r}
+plot(one$sum_poe,one$pct)
+one_md_10 <- lm(one$pct ~ one$sum_poe)
+summary(one_md_10)
+```
