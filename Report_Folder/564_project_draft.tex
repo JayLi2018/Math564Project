@@ -1,0 +1,26 @@
+\documentclass[11pt]{article}
+\begin{document}
+\title{Predicting NBA Regular Season Results Based on some popular statistics}
+\author{Chenjie Li,Qiao Qiao}
+\maketitle
+\section*{1.Problem Description}
+\subsection*{1.1 Background}
+\hspace{1.5em}NBA(National Basketball Association) is one of the most successful basketball league around the world.And since it is popular, there exists tons of websites recording the statistics related to the game. They not only provide simple metrics like Field Goal Percentage,  Average Points, Average Assists, but also some advanced metrics like PER,True shooting percentage and much more.
+
+Based on those statistics, people are exploring what kinds of metrics can result in a team's success or failure as a season.
+
+In this report, we investigated the relationship between the regular season results of the team and some popular metrics such as \textbf{team cumulative PER},\textbf{Team's Top Player Efficiency},\textbf{Team's Offensive Efficiency} for the past 5 seasons ($2014-2018$).Based on the results we get, we made some predictions for the results of this uocoming season.
+
+\section*{2.Data Source}
+\hspace{1.5em}There are many "data hubs" available, our data source is mainly from \textbf{insider.espn.com/nba/hollinger/statistics} and \textbf{https://www.basketball-reference.com/}.
+
+To be able to work with data, we deveoped a "web crawler" using Python Scrapy library. By using the program we got the formatted CSV file so that we can easily input them in R.
+
+Furthermore, since we are familiar with Database and SQL language, we also put the data in a database so we can manipulate the data easily by Queries.
+\section*{3.Win Ration Analysis}
+\subsection*{3.1Team Offensive Efficieny Analysis}
+\hspace{1.5em}Offensive Efficiency, as the name suggests, is a parameter measuring the efficiency of the offense.Here we explain this intuition by giving an simplified example:
+\hspace{1.5em} Player A shots 5 
+There are a lot different kinds of definitions for Player and Team's Efficiency 
+\end{document}
+
