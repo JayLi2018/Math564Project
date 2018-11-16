@@ -1,0 +1,170 @@
+---
+title: "TOE"
+author: "Chenjie Li"
+date: "November 16, 2018"
+output: pdf_document
+---
+
+```{r}
+team_stats <-read.csv('/home/chenjie/Desktop/Math564Project/WinRatio_TOE/toe_results.csv')
+team_stats$color = "green"
+team_stats$color[team_stats$win_ratio>=0.5]="blue"
+team_stats$color[team_stats$win_ratio>=0.7317073]="red" #won more than 60 games
+```
+# 2014 win ratio against Team TOE
+## Season 2014 our new TOE:
+```{r}
+s14 <- team_stats[team_stats$season == 2014,]
+new_mod14 <- lm(win_ratio ~ new_toe, data = s14)
+summary(new_mod14)
+```
+## Season 2014 old TOE:
+```{r}
+mod14 <- lm(win_ratio ~ toe, data = s14)
+summary(mod14)
+```
+
+```{r}
+plot(s14$new_toe,s14$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2014 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s14$team,data=s14, cex=0.4,pos = 4) + abline(new_mod14)+text(0.51,0.45,bquote( y == .(round(new_mod14$coef[2],3)) * X + (.(new_mod14$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+plot(s14$toe,s14$win_ratio,xlab = 'Team TOE', ylab = 'Win ratio', main = '2014 Win_Ratio against old team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ toe , labels=s14$team,data=s14, cex=0.4,pos = 4) + abline(mod14)+text(0.44,0.3,bquote( y == .(round(mod14$coef[2],3)) * X + (.(mod14$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+# 2015 win ratio against Team TOE
+## Season 2015 our new TOE:
+```{r}
+s15 <- team_stats[team_stats$season == 2015,]
+new_mod15 <- lm(win_ratio ~ new_toe, data = s15)
+summary(new_mod15)
+```
+## Season 2015 old TOE:
+```{r}
+mod15 <- lm(win_ratio ~ toe, data = s15)
+summary(mod15)
+```
+
+```{r}
+plot(s15$new_toe,s15$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2015 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s15$team,data=s15, cex=0.4,pos = 4) + abline(new_mod15)+text(0.46,0.6,bquote( y == .(round(new_mod15$coef[2],3)) * X + (.(new_mod15$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+plot(s15$toe,s15$win_ratio,xlab = 'Team TOE', ylab = 'Win ratio', main = '2015 Win_Ratio against old team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ toe , labels=s15$team,data=s15, cex=0.4,pos = 4) + abline(mod15)+text(0.4,0.5,bquote( y == .(round(mod15$coef[2],3)) * X + (.(mod15$coef[1],3))))
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+# 2016 win ratio against Team TOE
+## Season 2016 our new TOE:
+```{r}
+s16 <- team_stats[team_stats$season == 2016,]
+new_mod16 <- lm(win_ratio ~ new_toe, data = s16)
+summary(new_mod16)
+```
+## Season 2016 old TOE:
+```{r}
+mod16 <- lm(win_ratio ~ toe, data = s16)
+summary(mod16)
+```
+
+```{r}
+plot(s16$new_toe,s16$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2016 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s16$team,data=s16, cex=0.4,pos = 4) + abline(new_mod16)+text(0.52,0.43,bquote( y == .(round(new_mod16$coef[2],3)) * X + (.(new_mod16$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+plot(s16$toe,s16$win_ratio,xlab = 'Team TOE', ylab = 'Win ratio', main = '2016 Win_Ratio against old team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ toe , labels=s16$team,data=s16, cex=0.4,pos = 4) + abline(mod16)+text(0.41,0.4,bquote( y == .(round(mod16$coef[2],3)) * X + (.(mod16$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+# 2017 win ratio against Team TOE
+## Season 2017 our new TOE:
+```{r}
+s17 <- team_stats[team_stats$season == 2017,]
+new_mod17 <- lm(win_ratio ~ new_toe, data = s17)
+summary(new_mod17)
+```
+## Season 2017 old TOE:
+```{r}
+mod17 <- lm(win_ratio ~ toe, data = s17)
+summary(mod17)
+```
+
+```{r}
+plot(s17$new_toe,s17$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2017 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s17$team,data=s17, cex=0.4,pos = 4) + abline(new_mod17)+text(0.52,0.52,bquote( y == .(round(new_mod17$coef[2],3)) * X + (.(new_mod17$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+plot(s17$toe,s17$win_ratio,xlab = 'Team TOE', ylab = 'Win ratio', main = '2017 Win_Ratio against old team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ toe , labels=s17$team,data=s17, cex=0.4,pos = 4) + abline(mod17)+text(0.42,0.4,bquote( y == .(round(mod17$coef[2],3)) * X + (.(mod17$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+# 2018 win ratio against Team TOE
+## Season 2018 our new TOE:
+```{r}
+s18 <- team_stats[team_stats$season == 2018,]
+new_mod18 <- lm(win_ratio ~ new_toe, data = s18)
+summary(new_mod18)
+```
+## Season 2018 old TOE:
+```{r}
+mod18 <- lm(win_ratio ~ toe, data = s18)
+summary(mod18)
+```
+
+```{r}
+plot(s18$new_toe,s18$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2018 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s18$team,data=s18, cex=0.4,pos = 4) + abline(new_mod18)+text(0.515,0.42,bquote( y == .(round(new_mod15$coef[2],3)) * X + (.(new_mod15$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+plot(s18$toe,s18$win_ratio,xlab = 'Team TOE', ylab = 'Win ratio', main = '2018 Win_Ratio against old team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ toe , labels=s18$team,data=s18, cex=0.4,pos = 4) + abline(mod18)+text(0.425,0.4,bquote( y == .(round(mod18$coef[2],3)) * X + (.(mod18$coef[1],3))))
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+summary(mod14)$r.squared
+summary(mod15)$r.squared
+summary(mod16)$r.squared
+summary(mod17)$r.squared
+summary(new_mod17)$r.squared
+summary(new_mod16)$r.squared
+summary(new_mod15)$r.squared
+summary(new_mod14)$r.squared
+```
+
+```{r}
+mod14$coef
+mod15$coef
+mod16$coef
+mod17$coef
+
+new_mod14$coef
+new_mod15$coef
+new_mod16$coef
+new_mod17$coef
+
+```
