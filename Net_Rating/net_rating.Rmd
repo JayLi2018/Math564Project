@@ -1,0 +1,232 @@
+---
+title: "Net_Rating"
+author: "Chenjie Li"
+date: "November 23, 2018"
+output: pdf_document
+---
+
+
+```{r}
+# load data 
+data <- read.csv('/home/chenjie/Desktop/Math564Project/Net_Rating/net_rating.csv')
+data$color = "green"
+data$color[data$win_ratio>=0.5]="blue"
+data$color[data$win_ratio>=0.7317073]="red" #won more than 60 games
+```
+
+## 2014
+```{r}
+s14 <- data[data$season == 2014,]
+mod14 <- lm(win_ratio ~ net_rating, data = s14)
+summary(mod14)
+plot(s14$net_rating,s14$win_ratio,xlab = 'Team Net Rating', ylab = 'Win ratio', main = '2014 Win_Ratio against Team Net Rating',col = data$color,pch = 16) + text(win_ratio ~ net_rating , labels=s14$team,data=s14, cex=0.4,pos = 4) + abline(mod14) + text(0,0.35,bquote( y == .(round(mod14$coef[2],3)) * X + (.(mod14$coef[1],3))))
+
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+## 2015
+```{r}
+s15 <- data[data$season == 2015,]
+mod15 <- lm(win_ratio ~ net_rating, data = s15)
+summary(mod15)
+plot(s15$net_rating,s15$win_ratio,xlab = 'Team Net Rating', ylab = 'Win ratio', main = '2015 Win_Ratio against Team Net Rating',col = data$color,pch = 16) + text(win_ratio ~ net_rating , labels=s15$team,data=s15, cex=0.4,pos = 4) + abline(mod15) + text(0,0.35,bquote( y == .(round(mod15$coef[2],3)) * X + (.(mod15$coef[1],3))))
+
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+## 2016
+```{r}
+s16 <- data[data$season == 2016,]
+mod16 <- lm(win_ratio ~ net_rating, data = s16)
+summary(mod16)
+plot(s16$net_rating,s16$win_ratio,xlab = 'Team Net Rating', ylab = 'Win ratio', main = '2016 Win_Ratio against Team Net Rating',col = data$color,pch = 16) + text(win_ratio ~ net_rating , labels=s16$team,data=s16, cex=0.4,pos = 4) + abline(mod16) + text(0,0.35,bquote( y == .(round(mod16$coef[2],3)) * X + (.(mod16$coef[1],3))))
+
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+## 2017
+```{r}
+s17 <- data[data$season == 2017,]
+mod17 <- lm(win_ratio ~ net_rating, data = s17)
+summary(mod17)
+plot(s17$net_rating,s17$win_ratio,xlab = 'Team Net Rating', ylab = 'Win ratio', main = '2017 Win_Ratio against Team Net Rating',col = data$color,pch = 16) + text(win_ratio ~ net_rating , labels=s17$team,data=s17, cex=0.4,pos = 4) + abline(mod17) + text(0,0.35,bquote( y == .(round(mod17$coef[2],3)) * X + (.(mod17$coef[1],3))))
+
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+
+## 4 years as a whole
+```{r}
+four_years_total <- data
+mod_total <- lm(win_ratio ~ net_rating, data = four_years_total)
+summary(mod_total)
+plot(four_years_total$net_rating,four_years_total$win_ratio,xlab = 'Team Net Rating', ylab = 'Win ratio', main = '2014-2017 Win_Ratio against Team Net Rating',col = data$color,pch = 16)  + abline(mod15) + text(0,0.35,bquote( y == .(round(mod15$coef[2],3)) * X + (.(mod15$coef[1],3))))
+
+
+legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more than 60 games"),
+       col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
+```
+## predict 2018 and compare with the actual results
+```{r}
+x<-subset(data, season==2018, select=c(team,win_ratio,net_rating))
+s18 <- data[data$season == 2018,]
+pred <- predict(mod_total,s18,interval = "confidence")
+data1 <-cbind(x,pred)
+```
+
+```{r}
+plot(data1$net_rating,data1$fit,pch=15,col="red",xlab = "NetRating for 2018",ylab = "Win Ratio")+points(data1$net_rating,data1$win_ratio,pch=19,col="green") + text(win_ratio ~ net_rating , labels=data1$team,data=data1, cex=0.4,pos = 4)
+```
+
+```{r}
+SSE <-sum((data1$fit-data1$win_ratio)^2)
+SSE
+SSTO <- sum((data1$fit - mean(data1$win_ratio))^2)
+SSTO
+R_square <- 1 - SSE/SSTO
+R_square
+```
+
+## predict 2017 and compare with the actual results
+```{r}
+x<-subset(data, season==2017, select=c(team,win_ratio,net_rating))
+s17 <- data[data$season == 2017,]
+pred <- predict(mod_total,s17,interval = "confidence")
+data1 <-cbind(x,pred)
+
+```
+
+```{r}
+plot(data1$net_rating,data1$fit,pch=15,col="red",xlab = "NetRating for 2017",ylab = "Win Ratio")+points(data1$net_rating,data1$win_ratio,pch=19,col="green") + text(win_ratio ~ net_rating , labels=data1$team,data=data1, cex=0.4,pos = 4)
+
+
+legend("bottomright",legend=c("Predictions","Actual Win Ratios"),
+       col=c("red","green"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+SSE <-sum((data1$fit-data1$win_ratio)^2)
+SSE
+SSTO <- sum((data1$fit - mean(data1$win_ratio))^2)
+SSTO
+R_square <- 1 - SSE/SSTO
+R_square
+```
+
+## predict 2016 and compare with the actual results
+```{r}
+x<-subset(data, season==2016, select=c(team,win_ratio,net_rating))
+s16 <- data[data$season == 2016,]
+pred <- predict(mod_total,s16,interval = "confidence")
+data1 <-cbind(x,pred)
+
+```
+
+```{r}
+plot(data1$net_rating,data1$fit,pch=15,col="red",xlab = "NetRating for 2016",ylab = "Win Ratio")+points(data1$net_rating,data1$win_ratio,pch=19,col="green") + text(win_ratio ~ net_rating , labels=data1$team,data=data1, cex=0.4,pos = 4)
+
+
+legend("bottomright",legend=c("Predictions","Actual Win Ratios"),
+       col=c("red","green"), pch = c(16,16,16), cex = 0.7)
+```
+
+```{r}
+SSE <-sum((data1$fit-data1$win_ratio)^2)
+SSE
+SSTO <- sum((data1$fit - mean(data1$win_ratio))^2)
+SSTO
+R_square <- 1 - SSE/SSTO
+R_square
+```
+
+```{r}
+mod14$coef
+mod15$coef
+mod16$coef
+mod17$coef
+```
+
+```{r}
+summary(mod14)$r.squared
+summary(mod15)$r.squared
+summary(mod16)$r.squared
+summary(mod17)$r.squared
+```
+
+
+
+```{r}
+sample_data <-subset(data,data$season !=2018)
+sample_data
+```
+
+```{r}
+
+# training and testing data using "new_net_rating"
+
+set.seed(1)  # setting seed to reproduce results of random sampling
+
+trainingRowIndex <- sample(1:nrow(sample_data), 0.833*nrow(sample_data))  # row incices for training data
+
+trainingData <- sample_data[trainingRowIndex, ]  # model training data
+
+testData  <- sample_data[-trainingRowIndex, ]   # test data
+
+train_new_toe<- lm(win_ratio ~ net_rating, data=trainingData)  # build the model
+
+predict_new_toe <- predict(train_new_toe, testData)  # predict 
+
+summary(train_new_toe) # model summary
+
+# Calculate: akaike information criterion
+AIC(train_new_toe)
+
+actuals_preds_new <- data.frame(cbind(actuals=testData$win_ratio, predicteds=predict_new_toe)) 
+# make actuals_predicteds dataframe.
+
+correlation_accuracy_new <- cor(actuals_preds_new) 
+correlation_accuracy_new
+```
+
+
+# 5 - Fold Cross Validation - new net rating
+
+```{r}
+library(DAAG)
+sample_data <-subset(data,data$season !=2018)
+cv.lm(sample_data, form.lm = formula(win_ratio ~ net_rating), m=5, dots = FALSE, seed=123, plotit=TRUE, printit=TRUE)
+```
+
+# predict 2018 and compare with the actual results
+
+## using new net rating
+```{r}
+x<-subset(data, season==2018, select=c(team,win_ratio,net_rating))
+s18 <- data[data$season == 2018,]
+pred <- predict(mod_total,s18,interval = "confidence")
+data1 <-cbind(x,pred)
+
+ranking <- subset(data1,select=c(team,fit))
+ordered_data <- ranking[order(-ranking$fit),]
+ordered_data
+```
+
+```{r}
+plot(data1$net_rating,data1$fit,pch=15,col="red",xlab = "New Net Rating for 2018",ylab = "Win Ratio",cex = 0.5)+points(data1$net_rating,data1$win_ratio,pch=19,col="blue",cex = 0.4) + text(win_ratio ~ net_rating , labels=data1$team,data=data1, cex=0.35,pos = 4,col = "blue") + text(fit ~ net_rating , labels=data1$team,data=data1, cex=0.35,pos = 4,col="red") + abline(h = 0.5,lty=3) + abline(v=0,lty=3)
+```
+
+```{r}
+SSE <-sum((data1$fit-data1$win_ratio)^2)
+SSE
+SSTO <- sum((data1$win_ratio - mean(data1$win_ratio))^2)
+SSTO
+R_square <- 1 - SSE/SSTO
+R_square
+```
+

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  16 NOV 2018 16:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2018.10.12)  26 NOV 2018 18:39
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -72,6 +72,127 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \c@subfigure=\count88
 \c@subtable=\count89
 )
+(/usr/share/texlive/texmf-dist/tex/latex/multirow/multirow.sty
+Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
+\multirow@colwidth=\skip43
+\multirow@cntb=\count90
+\multirow@dima=\skip44
+\bigstrutjot=\dimen112
+)
+(/usr/share/texlive/texmf-dist/tex/latex/diagbox/diagbox.sty
+Package: diagbox 2016/12/28 v2.2 Making table heads with diagonal lines
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.sty
+Package: pict2e 2016/02/05 v0.3b Improved picture commands (HjG,RN,JT)
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/pict2e.cfg
+File: pict2e.cfg 2016/02/05 v0.1u pict2e configuration for teTeX/TeXLive
+)
+Package pict2e Info: Driver file: pdftex.def on input line 119.
+Package pict2e Info: Driver file for pict2e: p2e-pdftex.def on input line 121.
+
+(/usr/share/texlive/texmf-dist/tex/latex/pict2e/p2e-pdftex.def
+File: p2e-pdftex.def 2016/02/05 v0.1u Driver-dependant file (RN,HjG,JT)
+)
+\pIIe@GRAPH=\toks15
+\@arclen=\dimen113
+\@arcrad=\dimen114
+\@tempdimd=\dimen115
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/usr/share/texlive/texmf-dist/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count91
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count92
+\FP@xia=\count93
+\FP@xib=\count94
+\FP@xfa=\count95
+\FP@xfb=\count96
+\FP@rega=\count97
+\FP@regb=\count98
+\FP@regs=\count99
+\FP@times=\count100
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count101
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/usr/share/texlive/texmf-dist/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+))
+(/usr/share/texlive/texmf-dist/tex/latex/tools/calc.sty
+Package: calc 2014/10/28 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count102
+\calc@Bcount=\count103
+\calc@Adimen=\dimen116
+\calc@Bdimen=\dimen117
+\calc@Askip=\skip45
+\calc@Bskip=\skip46
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count104
+\calc@Cskip=\skip47
+)
+(/usr/share/texlive/texmf-dist/tex/latex/tools/array.sty
+Package: array 2016/10/06 v2.4d Tabular extension package (FMi)
+\col@sep=\dimen118
+\extrarowheight=\dimen119
+\NC@list=\toks16
+\extratabsurround=\skip48
+\backup@length=\skip49
+)
+\diagbox@boxa=\box26
+\diagbox@boxb=\box27
+\diagbox@boxm=\box28
+\diagbox@wd=\dimen120
+\diagbox@ht=\dimen121
+\diagbox@insepl=\dimen122
+\diagbox@insepr=\dimen123
+\diagbox@outsepl=\dimen124
+\diagbox@outsepr=\dimen125
+)
+(/usr/share/texlive/texmf-dist/tex/latex/graphics/color.sty
+Package: color 2016/07/10 v1.1e Standard LaTeX Color (DPC)
+
+(/usr/share/texlive/texmf-dist/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package color Info: Driver file: pdftex.def on input line 147.
+)
+(/usr/share/texlive/texmf-dist/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2012/02/13 v1.0a Color table columns (DPC)
+\everycr=\toks17
+\minrowclearance=\skip50
+)
+Package color Info: Redefining color yellow on input line 10.
+
 (/usr/share/texlive/texmf-dist/tex/latex/geometry/geometry.sty
 Package: geometry 2010/09/12 v5.6 Page Geometry
 
@@ -85,48 +206,48 @@ Package ifvtex Info: VTeX not detected.
 (/usr/share/texlive/texmf-dist/tex/generic/ifxetex/ifxetex.sty
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-\Gm@cnth=\count90
-\Gm@cntv=\count91
-\c@Gm@tempcnt=\count92
-\Gm@bindingoffset=\dimen112
-\Gm@wd@mp=\dimen113
-\Gm@odd@mp=\dimen114
-\Gm@even@mp=\dimen115
-\Gm@layoutwidth=\dimen116
-\Gm@layoutheight=\dimen117
-\Gm@layouthoffset=\dimen118
-\Gm@layoutvoffset=\dimen119
-\Gm@dimlist=\toks15
+\Gm@cnth=\count105
+\Gm@cntv=\count106
+\c@Gm@tempcnt=\count107
+\Gm@bindingoffset=\dimen126
+\Gm@wd@mp=\dimen127
+\Gm@odd@mp=\dimen128
+\Gm@even@mp=\dimen129
+\Gm@layoutwidth=\dimen130
+\Gm@layoutheight=\dimen131
+\Gm@layouthoffset=\dimen132
+\Gm@layoutvoffset=\dimen133
+\Gm@dimlist=\toks18
 )
 (./564_project_draft.aux)
 \openout1 = `564_project_draft.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 8.
-LaTeX Font Info:    ... okay on input line 8.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 13.
+LaTeX Font Info:    ... okay on input line 13.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count93
-\scratchdimen=\dimen120
-\scratchbox=\box26
-\nofMPsegments=\count94
-\nofMParguments=\count95
-\everyMPshowfont=\toks16
-\MPscratchCnt=\count96
-\MPscratchDim=\dimen121
-\MPnumerator=\count97
-\makeMPintoPDFobject=\count98
-\everyMPtoPDFconversion=\toks17
+\scratchcounter=\count108
+\scratchdimen=\dimen134
+\scratchbox=\box29
+\nofMPsegments=\count109
+\nofMParguments=\count110
+\everyMPshowfont=\toks19
+\MPscratchCnt=\count111
+\MPscratchDim=\dimen135
+\MPnumerator=\count112
+\makeMPintoPDFobject=\count113
+\everyMPtoPDFconversion=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 
@@ -217,51 +338,51 @@ Package caption Info: End \AtBeginDocument code.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 11.
+(Font)              <12> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 11.
+(Font)              <8> on input line 16.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 11.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
+(Font)              <6> on input line 16.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 25.
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 25.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <10.95> on input line 23.
+(Font)              <10.95> on input line 29.
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
 <./Images/15old.jpg, id=19, 1233.60875pt x 787.94376pt>
 File: ./Images/15old.jpg Graphic file (type jpg)
 <use ./Images/15old.jpg>
-Package pdftex.def Info: ./Images/15old.jpg  used on input line 66.
+Package pdftex.def Info: ./Images/15old.jpg  used on input line 72.
 (pdftex.def)             Requested size: 194.48758pt x 124.22203pt.
 <./Images/15new.jpg, id=20, 1204.5pt x 823.075pt>
 File: ./Images/15new.jpg Graphic file (type jpg)
 <use ./Images/15new.jpg>
-Package pdftex.def Info: ./Images/15new.jpg  used on input line 69.
+Package pdftex.def Info: ./Images/15new.jpg  used on input line 75.
 (pdftex.def)             Requested size: 194.48758pt x 132.90036pt.
-<./Images/15oldSummary.jpg, id=21, 907.39pt x 549.05125pt>
-File: ./Images/15oldSummary.jpg Graphic file (type jpg)
-<use ./Images/15oldSummary.jpg>
-Package pdftex.def Info: ./Images/15oldSummary.jpg  used on input line 72.
+<./Images/15oldsummary.jpg, id=21, 907.39pt x 549.05125pt>
+File: ./Images/15oldsummary.jpg Graphic file (type jpg)
+<use ./Images/15oldsummary.jpg>
+Package pdftex.def Info: ./Images/15oldsummary.jpg  used on input line 78.
 (pdftex.def)             Requested size: 181.52217pt x 109.83344pt.
-<./Images/15newSummary.jpg, id=22, 904.37875pt x 558.085pt>
-File: ./Images/15newSummary.jpg Graphic file (type jpg)
-<use ./Images/15newSummary.jpg>
-Package pdftex.def Info: ./Images/15newSummary.jpg  used on input line 76.
+<./Images/15newsummary.jpg, id=22, 904.37875pt x 558.085pt>
+File: ./Images/15newsummary.jpg Graphic file (type jpg)
+<use ./Images/15newsummary.jpg>
+Package pdftex.def Info: ./Images/15newsummary.jpg  used on input line 82.
 (pdftex.def)             Requested size: 181.52217pt x 112.01526pt.
 <./Images/ComparisionR.jpg, id=23, 978.65625pt x 339.2675pt>
 File: ./Images/ComparisionR.jpg Graphic file (type jpg)
 <use ./Images/ComparisionR.jpg>
-Package pdftex.def Info: ./Images/ComparisionR.jpg  used on input line 84.
+Package pdftex.def Info: ./Images/ComparisionR.jpg  used on input line 90.
 (pdftex.def)             Requested size: 172.87637pt x 59.9266pt.
 <./Images/Beta1.jpg, id=24, 296.10625pt x 107.40125pt>
 File: ./Images/Beta1.jpg Graphic file (type jpg)
 <use ./Images/Beta1.jpg>
-Package pdftex.def Info: ./Images/Beta1.jpg  used on input line 87.
+Package pdftex.def Info: ./Images/Beta1.jpg  used on input line 93.
 (pdftex.def)             Requested size: 172.87637pt x 62.70573pt.
 
 
@@ -270,32 +391,266 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[3] [4 <./Images/15old.jpg> <./Images/15new.jpg> <./Images/15oldSummary.jpg> <.
-/Images/15newSummary.jpg> <./Images/ComparisionR.jpg> <./Images/Beta1.jpg>]
-[5] (./564_project_draft.aux) ) 
+[3] [4 <./Images/15old.jpg> <./Images/15new.jpg> <./Images/15oldsummary.jpg> <.
+/Images/15newsummary.jpg> <./Images/ComparisionR.jpg> <./Images/Beta1.jpg>]
+[5]
+<./Images/old_toe.jpg, id=35, 909.3975pt x 465.74pt>
+File: ./Images/old_toe.jpg Graphic file (type jpg)
+<use ./Images/old_toe.jpg>
+Package pdftex.def Info: ./Images/old_toe.jpg  used on input line 164.
+(pdftex.def)             Requested size: 194.48758pt x 99.59915pt.
+<./Images/new_toe_pred.jpg, id=36, 902.37125pt x 470.75874pt>
+File: ./Images/new_toe_pred.jpg Graphic file (type jpg)
+<use ./Images/new_toe_pred.jpg>
+Package pdftex.def Info: ./Images/new_toe_pred.jpg  used on input line 167.
+(pdftex.def)             Requested size: 194.48758pt x 101.46257pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 181--184
+
+ []
+
+[6 <./Images/old_toe.jpg> <./Images/new_toe_pred.jpg>]
+Underfull \hbox (badness 10000) in paragraph at lines 198--199
+
+ []
+
+
+Overfull \hbox (30.57323pt too wide) in paragraph at lines 204--205
+[]\OT1/cmr/m/n/10.95 Just as what we've de-fined in TOE and New TOE, we added o
+p-po-nents' per-for-mance.OP2FGM
+ []
+
+<./Images/old_nr.jpg, id=40, 978.65625pt x 549.05125pt>
+File: ./Images/old_nr.jpg Graphic file (type jpg)
+<use ./Images/old_nr.jpg>
+Package pdftex.def Info: ./Images/old_nr.jpg  used on input line 215.
+(pdftex.def)             Requested size: 194.48758pt x 109.11295pt.
+<./Images/new_nr.jpg, id=41, 1383.1675pt x 791.95876pt>
+File: ./Images/new_nr.jpg Graphic file (type jpg)
+<use ./Images/new_nr.jpg>
+Package pdftex.def Info: ./Images/new_nr.jpg  used on input line 218.
+(pdftex.def)             Requested size: 194.48758pt x 111.35684pt.
+<./Images/old_nr_summary.jpg, id=42, 663.47874pt x 389.455pt>
+File: ./Images/old_nr_summary.jpg Graphic file (type jpg)
+<use ./Images/old_nr_summary.jpg>
+Package pdftex.def Info: ./Images/old_nr_summary.jpg  used on input line 221.
+(pdftex.def)             Requested size: 181.52217pt x 106.55075pt.
+<./Images/new_nr_summary.jpg, id=43, 953.5625pt x 556.0775pt>
+File: ./Images/new_nr_summary.jpg Graphic file (type jpg)
+<use ./Images/new_nr_summary.jpg>
+Package pdftex.def Info: ./Images/new_nr_summary.jpg  used on input line 225.
+(pdftex.def)             Requested size: 181.52217pt x 105.85097pt.
+[7]
+Overfull \hbox (32.7928pt too wide) in paragraph at lines 232--243
+ [] 
+ []
+
+[8 <./Images/old_nr.jpg> <./Images/new_nr.jpg> <./Images/old_nr_summary.jpg> <.
+/Images/new_nr_summary.jpg>]
+<./Images/old_nr_pre.jpg, id=51, 1142.2675pt x 587.19376pt>
+File: ./Images/old_nr_pre.jpg Graphic file (type jpg)
+<use ./Images/old_nr_pre.jpg>
+Package pdftex.def Info: ./Images/old_nr_pre.jpg  used on input line 305.
+(pdftex.def)             Requested size: 432.19756pt x 222.17725pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/new_nr_pre.jpg, id=52, 1388.18625pt x 722.7pt>
+File: ./Images/new_nr_pre.jpg Graphic file (type jpg)
+<use ./Images/new_nr_pre.jpg>
+Package pdftex.def Info: ./Images/new_nr_pre.jpg  used on input line 311.
+(pdftex.def)             Requested size: 432.19756pt x 225.0051pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[9]
+Underfull \hbox (badness 10000) in paragraph at lines 317--318
+
+ []
+
+[10 <./Images/old_nr_pre.jpg> <./Images/new_nr_pre.jpg>] [11]
+Underfull \hbox (badness 10000) in paragraph at lines 392--395
+
+ []
+
+[12] [13]
+LaTeX Font Info:    Font shape `OMS/cmr/bx/n' in size <12> not available
+(Font)              Font shape `OMS/cmsy/b/n' tried instead on input line 436.
+
+Underfull \hbox (badness 10000) in paragraph at lines 437--453
+
+ []
+
+[14]
+<./Images/nr_14.jpg, id=73, 1129.21875pt x 681.54625pt>
+File: ./Images/nr_14.jpg Graphic file (type jpg)
+<use ./Images/nr_14.jpg>
+Package pdftex.def Info: ./Images/nr_14.jpg  used on input line 463.
+(pdftex.def)             Requested size: 194.48758pt x 117.37965pt.
+<./Images/new_nr_14.jpg, id=74, 608.2725pt x 400.49625pt>
+File: ./Images/new_nr_14.jpg Graphic file (type jpg)
+<use ./Images/new_nr_14.jpg>
+Package pdftex.def Info: ./Images/new_nr_14.jpg  used on input line 466.
+(pdftex.def)             Requested size: 194.48758pt x 128.0514pt.
+<./Images/nr_14_summary.jpg, id=75, 791.95876pt x 468.75125pt>
+File: ./Images/nr_14_summary.jpg Graphic file (type jpg)
+<use ./Images/nr_14_summary.jpg>
+Package pdftex.def Info: ./Images/nr_14_summary.jpg  used on input line 469.
+(pdftex.def)             Requested size: 181.52217pt x 107.43858pt.
+<./Images/new_nr_14_summary.jpg, id=76, 454.69875pt x 268.00125pt>
+File: ./Images/new_nr_14_summary.jpg Graphic file (type jpg)
+<use ./Images/new_nr_14_summary.jpg>
+Package pdftex.def Info: ./Images/new_nr_14_summary.jpg  used on input line 473
+.
+(pdftex.def)             Requested size: 181.52217pt x 106.99004pt.
+<./Images/nr_15.jpg, id=77, 1127.21124pt x 669.50125pt>
+File: ./Images/nr_15.jpg Graphic file (type jpg)
+<use ./Images/nr_15.jpg>
+Package pdftex.def Info: ./Images/nr_15.jpg  used on input line 483.
+(pdftex.def)             Requested size: 194.48758pt x 115.50952pt.
+<./Images/new_nr_15.jpg, id=78, 643.40375pt x 404.51125pt>
+File: ./Images/new_nr_15.jpg Graphic file (type jpg)
+<use ./Images/new_nr_15.jpg>
+Package pdftex.def Info: ./Images/new_nr_15.jpg  used on input line 486.
+(pdftex.def)             Requested size: 194.48758pt x 122.27399pt.
+<./Images/nr_15_summary.jpg, id=79, 798.985pt x 464.73625pt>
+File: ./Images/nr_15_summary.jpg Graphic file (type jpg)
+<use ./Images/nr_15_summary.jpg>
+Package pdftex.def Info: ./Images/nr_15_summary.jpg  used on input line 489.
+(pdftex.def)             Requested size: 181.52217pt x 105.58229pt.
+<./Images/new_nr_15_summary.jpg, id=80, 465.74pt x 271.0125pt>
+File: ./Images/new_nr_15_summary.jpg Graphic file (type jpg)
+<use ./Images/new_nr_15_summary.jpg>
+Package pdftex.def Info: ./Images/new_nr_15_summary.jpg  used on input line 493
+.
+(pdftex.def)             Requested size: 181.52217pt x 105.62415pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/nr_16.jpg, id=81, 1106.1325pt x 672.5125pt>
+File: ./Images/nr_16.jpg Graphic file (type jpg)
+<use ./Images/nr_16.jpg>
+Package pdftex.def Info: ./Images/nr_16.jpg  used on input line 505.
+(pdftex.def)             Requested size: 194.48758pt x 118.24557pt.
+<./Images/new_nr_16.jpg, id=82, 642.4pt x 387.4475pt>
+File: ./Images/new_nr_16.jpg Graphic file (type jpg)
+<use ./Images/new_nr_16.jpg>
+Package pdftex.def Info: ./Images/new_nr_16.jpg  used on input line 508.
+(pdftex.def)             Requested size: 194.48758pt x 117.29929pt.
+<./Images/nr_16_summary.jpg, id=83, 799.98875pt x 465.74pt>
+File: ./Images/nr_16_summary.jpg Graphic file (type jpg)
+<use ./Images/nr_16_summary.jpg>
+Package pdftex.def Info: ./Images/nr_16_summary.jpg  used on input line 511.
+(pdftex.def)             Requested size: 181.52217pt x 105.6753pt.
+<./Images/new_nr_16_summary.jpg, id=84, 471.7625pt x 271.0125pt>
+File: ./Images/new_nr_16_summary.jpg Graphic file (type jpg)
+<use ./Images/new_nr_16_summary.jpg>
+Package pdftex.def Info: ./Images/new_nr_16_summary.jpg  used on input line 515
+.
+(pdftex.def)             Requested size: 181.52217pt x 104.28017pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/nr_17.jpg, id=85, 1141.26375pt x 662.475pt>
+File: ./Images/nr_17.jpg Graphic file (type jpg)
+<use ./Images/nr_17.jpg>
+Package pdftex.def Info: ./Images/nr_17.jpg  used on input line 527.
+(pdftex.def)             Requested size: 194.48758pt x 112.89218pt.
+<./Images/new_nr_17.jpg, id=86, 645.41125pt x 387.4475pt>
+File: ./Images/new_nr_17.jpg Graphic file (type jpg)
+<use ./Images/new_nr_17.jpg>
+Package pdftex.def Info: ./Images/new_nr_17.jpg  used on input line 530.
+(pdftex.def)             Requested size: 194.48758pt x 116.74948pt.
+<./Images/nr_17_summary.jpg, id=87, 795.97375pt x 474.77374pt>
+File: ./Images/nr_17_summary.jpg Graphic file (type jpg)
+<use ./Images/nr_17_summary.jpg>
+Package pdftex.def Info: ./Images/nr_17_summary.jpg  used on input line 533.
+(pdftex.def)             Requested size: 181.52217pt x 108.26837pt.
+<./Images/new_nr_17_summary.jpg, id=88, 467.7475pt x 265.99374pt>
+File: ./Images/new_nr_17_summary.jpg Graphic file (type jpg)
+<use ./Images/new_nr_17_summary.jpg>
+Package pdftex.def Info: ./Images/new_nr_17_summary.jpg  used on input line 537
+.
+(pdftex.def)             Requested size: 181.52217pt x 103.22574pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<./Images/14old.jpg, id=89, 451.6875pt x 289.08pt>
+File: ./Images/14old.jpg Graphic file (type jpg)
+<use ./Images/14old.jpg>
+Package pdftex.def Info: ./Images/14old.jpg  used on input line 551.
+(pdftex.def)             Requested size: 194.48758pt x 124.474pt.
+<./Images/14new.jpg, id=90, 443.40656pt x 285.31593pt>
+File: ./Images/14new.jpg Graphic file (type jpg)
+<use ./Images/14new.jpg>
+Package pdftex.def Info: ./Images/14new.jpg  used on input line 554.
+(pdftex.def)             Requested size: 194.48758pt x 125.14757pt.
+<./Images/14oldsummary.jpg, id=91, 347.04657pt x 144.54pt>
+File: ./Images/14oldsummary.jpg Graphic file (type jpg)
+<use ./Images/14oldsummary.jpg>
+Package pdftex.def Info: ./Images/14oldsummary.jpg  used on input line 557.
+(pdftex.def)             Requested size: 181.52217pt x 75.60452pt.
+<./Images/14newsummary.jpg, id=92, 342.5297pt x 204.765pt>
+File: ./Images/14newsummary.jpg Graphic file (type jpg)
+<use ./Images/14newsummary.jpg>
+Package pdftex.def Info: ./Images/14newsummary.jpg  used on input line 561.
+(pdftex.def)             Requested size: 181.52217pt x 108.51555pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+File: ./Images/15old.jpg Graphic file (type jpg)
+<use ./Images/15old.jpg>
+Package pdftex.def Info: ./Images/15old.jpg  used on input line 574.
+(pdftex.def)             Requested size: 194.48758pt x 124.22203pt.
+File: ./Images/15new.jpg Graphic file (type jpg)
+<use ./Images/15new.jpg>
+Package pdftex.def Info: ./Images/15new.jpg  used on input line 577.
+(pdftex.def)             Requested size: 194.48758pt x 132.90036pt.
+File: ./Images/15oldsummary.jpg Graphic file (type jpg)
+<use ./Images/15oldsummary.jpg>
+Package pdftex.def Info: ./Images/15oldsummary.jpg  used on input line 580.
+(pdftex.def)             Requested size: 181.52217pt x 109.83344pt.
+File: ./Images/14newsummary.jpg Graphic file (type jpg)
+<use ./Images/14newsummary.jpg>
+Package pdftex.def Info: ./Images/14newsummary.jpg  used on input line 584.
+(pdftex.def)             Requested size: 181.52217pt x 108.51555pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[15 <./Images/nr_14.jpg> <./Images/new_nr_14.jpg> <./Images/nr_14_summary.jpg> 
+<./Images/new_nr_14_summary.jpg>] [16 <./Images/nr_15.jpg> <./Images/new_nr_15.
+jpg> <./Images/nr_15_summary.jpg> <./Images/new_nr_15_summary.jpg> <./Images/nr
+_16.jpg> <./Images/new_nr_16.jpg> <./Images/nr_16_summary.jpg> <./Images/new_nr
+_16_summary.jpg>] [17 <./Images/nr_17.jpg> <./Images/new_nr_17.jpg> <./Images/n
+r_17_summary.jpg> <./Images/new_nr_17_summary.jpg> <./Images/14old.jpg> <./Imag
+es/14new.jpg> <./Images/14oldsummary.jpg> <./Images/14newsummary.jpg>] [18]
+(./564_project_draft.aux) ) 
 Here is how much of TeX's memory you used:
- 3130 strings out of 492982
- 49647 string characters out of 6134895
- 111985 words of memory out of 5000000
- 6670 multiletter control sequences out of 15000+600000
- 9157 words of font info for 32 fonts, out of 8000000 for 9000
+ 4420 strings out of 492982
+ 67258 string characters out of 6134895
+ 153138 words of memory out of 5000000
+ 7863 multiletter control sequences out of 15000+600000
+ 9412 words of font info for 33 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 42i,8n,40p,872b,441s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/publi
-c/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsf
-onts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/c
-m/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi
-8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb><
-/usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/sh
-are/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/tex
-live/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dis
-t/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on 564_project_draft.pdf (5 pages, 474056 bytes).
+ 42i,15n,40p,902b,465s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/am
+sfonts/cm/cmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfont
+s/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+mbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.
+pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></u
+sr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/shar
+e/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texli
+ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmr17.pfb></usr/share/texlive/texm
+f-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texlive/texmf-dist/f
+onts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/t
+ype1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/pu
+blic/amsfonts/cm/cmti10.pfb>
+Output written on 564_project_draft.pdf (18 pages, 1691244 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
+ 144 PDF objects out of 1000 (max. 8388607)
+ 77 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 31 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 171 words of extra memory for PDF output out of 10000 (max. 10000000)
 

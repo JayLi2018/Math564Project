@@ -1,7 +1,7 @@
 ---
-title: "TOE"
+title: "Adjusted_TOE"
 author: "Chenjie Li"
-date: "November 16, 2018"
+date: "November 23, 2018"
 output: pdf_document
 ---
 
@@ -23,6 +23,7 @@ summary(new_mod14)
 mod14 <- lm(win_ratio ~ toe, data = s14)
 summary(mod14)
 ```
+
 
 ```{r}
 plot(s14$new_toe,s14$win_ratio,xlab = 'New Team TOE', ylab = 'Win ratio', main = '2014 Win_Ratio against New team TOE',col = team_stats$color,pch = 16) + text(win_ratio ~ new_toe , labels=s14$team,data=s14, cex=0.4,pos = 4) + abline(new_mod14)+text(0.51,0.45,bquote( y == .(round(new_mod14$coef[2],3)) * X + (.(new_mod14$coef[1],3))))
@@ -145,168 +146,5 @@ legend("bottomright",legend=c("Win Ratio < 50%", "Win Ratio >= 50%","Win more th
        col=c("green", "blue","red"), pch = c(16,16,16), cex = 0.7)
 
 ```
-
-```{r}
-summary(mod14)$r.squared
-summary(mod15)$r.squared
-summary(mod16)$r.squared
-summary(mod17)$r.squared
-summary(new_mod17)$r.squared
-summary(new_mod16)$r.squared
-summary(new_mod15)$r.squared
-summary(new_mod14)$r.squared
-```
-
-```{r}
-mod14$coef
-mod15$coef
-mod16$coef
-mod17$coef
-
-new_mod14$coef
-new_mod15$coef
-new_mod16$coef
-new_mod17$coef
-
-```
-
-```{r}
-sample_data <-subset(team_stats,team_stats$season !=2018)
-sample_data
-```
-
-```{r}
-new_total_mod <-lm(win_ratio ~ new_toe,data = sample_data)
-old_mod <- lm(win_ratio ~ toe,data = sample_data)
-summary(new_total_mod)
-summary(old_mod)
-```
-
-```{r}
-AIC(new_total_mod)
-AIC(old_mod)
-```
-
-```{r}
-BIC(new_total_mod)
-BIC(old_mod)
-```
-
-```{r}
-# training and testing data using "old_toe"
-
-set.seed(1)  # setting seed to reproduce results of random sampling
-
-trainingRowIndex <- sample(1:nrow(sample_data), 0.833*nrow(sample_data))  # row incices for training data
-
-trainingData <- sample_data[trainingRowIndex, ]  # model training data
-
-testData  <- sample_data[-trainingRowIndex, ]   # test data
-
-train_old_toe<- lm(win_ratio ~ toe, data=trainingData)  # build the model
-
-predict_old_toe <- predict(train_old_toe, testData)  # predict 
-
-summary(train_old_toe) # model summary
-
-# Calculate: akaike information criterion
-AIC(train_old_toe)
-
-actuals_preds <- data.frame(cbind(actuals=testData$win_ratio, predicteds=predict_old_toe)) 
-# make actuals_predicteds dataframe.
-
-correlation_accuracy <- cor(actuals_preds) 
-correlation_accuracy
-```
-
-
-```{r}
-
-# training and testing data using "new_toe"
-
-set.seed(1)  # setting seed to reproduce results of random sampling
-
-trainingRowIndex <- sample(1:nrow(sample_data), 0.833*nrow(sample_data))  # row incices for training data
-
-trainingData <- sample_data[trainingRowIndex, ]  # model training data
-
-testData  <- sample_data[-trainingRowIndex, ]   # test data
-
-train_new_toe<- lm(win_ratio ~ new_toe, data=trainingData)  # build the model
-
-predict_new_toe <- predict(train_new_toe, testData)  # predict 
-
-summary(train_new_toe) # model summary
-
-# Calculate: akaike information criterion
-AIC(train_new_toe)
-
-actuals_preds_new <- data.frame(cbind(actuals=testData$win_ratio, predicteds=predict_new_toe)) 
-# make actuals_predicteds dataframe.
-
-correlation_accuracy_new <- cor(actuals_preds_new) 
-correlation_accuracy_new
-```
-# 5 - Fold Cross Validation - old toe
-```{r}
-library(DAAG)
-sample_data <-subset(team_stats,team_stats$season !=2018)
-cv.lm(sample_data, form.lm = formula(win_ratio ~ toe), m=5, dots = FALSE, seed=123, plotit=TRUE, printit=TRUE)
-```
-
-# 5 - Fold Cross Validation - new toe
-
-```{r}
-library(DAAG)
-sample_data <-subset(team_stats,team_stats$season !=2018)
-cv.lm(sample_data, form.lm = formula(win_ratio ~ new_toe), m=5, dots = FALSE, seed=123, plotit=TRUE, printit=TRUE)
-```
-
-# predict 2018 and compare with the actual results
-
-## using old toe:
-```{r}
-x<-subset(team_stats, season==2018, select=c(team,win_ratio,toe))
-s18 <- team_stats[team_stats$season == 2018,]
-pred <- predict(old_mod,s18,interval = "confidence")
-data1 <-cbind(x,pred)
-```
-
-```{r}
-plot(data1$toe,data1$fit,pch=15,col="red",xlab = "Old TOE for 2018",ylab = "Win Ratio")+points(data1$toe,data1$win_ratio,pch=19,col="green") + text(win_ratio ~ toe , labels=data1$team,data=data1, cex=0.4,pos = 4)
-```
-
-```{r}
-SSE <-sum((data1$fit-data1$win_ratio)^2)
-SSE
-SSTO <- sum((data1$win_ratio - mean(data1$win_ratio))^2)
-SSTO
-R_square <- 1 - SSE/SSTO
-R_square
-```
-
-## using new toe:
-```{r}
-x1<-subset(team_stats, season==2018, select=c(team,win_ratio,new_toe))
-s18 <- team_stats[team_stats$season == 2018,]
-pred1 <- predict(new_total_mod,s18,interval = "confidence")
-data2 <-cbind(x1,pred1)
-mean <- mean(data2$win_ratio)
-mean
-```
-
-```{r}
-plot(data2$new_toe,data2$fit,pch=15,col="red",xlab = "New TOE for 2018",ylab = "Win Ratio")+points(data2$new_toe,data2$win_ratio,pch=19,col="green") + text(win_ratio ~  new_toe , labels=data2$team,data=data2, cex=0.4,pos = 4)
-```
-
-```{r}
-SSE <-sum((data2$fit-data2$win_ratio)^2)
-SSE
-SSTO <- sum((data2$win_ratio - mean(data2$win_ratio))^2)
-SSTO
-R_square <- 1 - SSE/SSTO
-R_square
-```
-
 
 

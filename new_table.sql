@@ -100,3 +100,36 @@ order by season,player, team
 select season,team,pct as win_ratio, log(sum(gp*mpg*per)*sum(gp*mpg *per)) as log_sum 
 from sorted_12 
 group by season,team,win_ratio
+
+
+CREATE TABLE TEAM_OPP_STATS
+(
+season INT,
+team VARCHAR(5),
+OPP_FGM,,
+OPP_FGA,,
+OPP_FG_PCT,,
+OPP_3PM,,
+OPP_3PA,,
+OPP_3P_PCT,,
+OPP_FTM,,
+OPP_FTA,,
+OPP_FT_PCT,,
+OPP_OREB,,
+OPP_DREB,,
+OPP_REB,,
+OPP_AST,,
+OPP_TOV,,
+OPP_STL,,
+OPP_BLK,,
+OPP_BLKA,,
+OPP_PF,,
+OPP_PFD,,
+OPP_PTS,,
+OPP_PLUS_MINUS,
+);
+
+ \copy TEAM_OPP_STATS(season,team,OPP_FGM,OPP_FGA,OPP_FG_PCT,OPP_3PM,OPP_3PA,OPP_3P_PCT,OPP_FTM,OPP_FTA,OPP_FT_PCT,OPP_OREB,OPP_DREB,OPP_REB,OPP_AST,OPP_TOV,OPP_STL,OPP_BLK,OPP_BLKA,OPP_PF,OPP_PFD,OPP_PTS,OPP_PLUS_MINUS) FROM '/home/chenjie/Desktop/Math564Project/WinRatio_TOE/oppo_stats.csv' DELIMITER ',' CSV HEADER
+
+
+
