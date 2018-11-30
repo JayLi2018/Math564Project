@@ -8,12 +8,30 @@
 \usepackage{diagbox}
 \usepackage{color, colortbl}
 \definecolor{yellow}{rgb}{1,1,0.25}
-\usepackage[left=3.2cm, right=3.2cm, top=3cm]{geometry}
+\usepackage[left=3.2cm, right=3.2cm, top=3cm]
+{geometry}
 \setstretch{1.5}
+\usepackage[bottom]{footmisc}
 \begin{document}
 \title{Predicting NBA Regular Season Results Based on some popular statistics}
 \author{Chenjie Li, Qiao Qiao, Giyoon Kwag}
 \maketitle
+
+\vspace*{3\baselineskip}
+\begin{center}
+Contributions:\\
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+Name & Chenjie Li& Qiao Qiao & Giyoon Kwag\\
+\hline
+Contribution &  $33.33\%$ & $33.33\%$ & $33.33\%$ \\
+\hline
+\end{tabular}
+\end{center}
+\newpage
+
 \section*{1.Problem Description}
 \subsection*{1.1 Background}
 \hspace{1.5em} NBA (National Basketball Association) is one of the most successful basketball league around the world.And since it is popular, there exists tons of websites recording the statistics related to the game. They not only provide simple metrics like Field Goal Percentage,  Average Points, Average Assists, but also some advanced metrics like PER,True shooting percentage and much more.
@@ -71,18 +89,12 @@ We calculated the results from Season 2014 - Season 2017, here we only show two 
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{15old.jpg}
   \end{subfigure}
+      \caption{2015 Season Using Old TOE}
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{15new.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{15oldsummary.jpg}
-    \caption{2015 Season Using Old TOE}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{15newsummary.jpg}
     \caption{2015 Season Using New TOE}
-  \end{subfigure}
-  \caption{Comparision Between TOE and New TOE in 2015 Season}
+
 \end{figure}
 \begin{figure}[h!]
 \centering
@@ -168,7 +180,7 @@ The Results are shown below:
   \end{subfigure}
   \caption{Predictions for 2018 season( left:Old TOE, right: New TOE)}
 \end{figure}
-From the results above, we calculated $R^2$ for both of the model. $R^2_{old}$ = 0.458, $R^2_{new}$ = 0.265.
+From the results above, we calculated Sum of square errors for both of the model. $SSE_{old}$ = 0.35, $SSE_{new}$ = 0.474.
 
 The results we got surprisingly contradict our expectations. 
 Despite those results,we believe our model is still better than the old model in the following reasons:
@@ -214,18 +226,11 @@ The results for 2015 season are shown below, for comprehensive results, please c
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{old_nr.jpg}
   \end{subfigure}
+  \caption{2015 Season Using Net Rating}
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{new_nr.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{old_nr_summary.jpg}
-    \caption{2015 Season Using Net Rating}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{new_nr_summary.jpg}
     \caption{2015 Season Using New Net Rating}
-  \end{subfigure}
-  \caption{Comparison Between Net Rating and New Net Rating in 2015 Season}
 \end{figure}
 
 \begin{center}
@@ -312,7 +317,7 @@ The Results are shown below:
   \caption{Predictions for 2018 season using Net Rating}
 \end{figure}
 
-From the results above, we calculated $R^2$ for both of the model. $R^2_{old}$ = 0.816, $R^2_{new}$ = 0.663.
+From the results above, we calculated sum of squares for both of the model. $SSE_{old}$ = 0.217, $SSE_{new}$ = 0.119.
 
 Here are the comparison between two versions of Net Ratings and the Real Results:\\
 
@@ -465,14 +470,7 @@ The results show when evaluating the models to predict NBA regular season result
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{new_nr_14.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{nr_14_summary.jpg}
-    \caption{2014 Season Using Net Rating}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{new_nr_14_summary.jpg}
-    \caption{2014 Season Using New Net Rating}
-  \end{subfigure}
+
 \bigskip
 Figure 1: Comparison Between Net Rating and New Net Rating in 2014 Season
 \end{figure}
@@ -485,15 +483,6 @@ Figure 1: Comparison Between Net Rating and New Net Rating in 2014 Season
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{new_nr_15.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{nr_15_summary.jpg}
-    \caption{2015 Season Using Net Rating}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{new_nr_15_summary.jpg}
-    \caption{2015 Season Using New Net Rating}
-  \end{subfigure}
-
 \bigskip
 
 Figure 2: Comparison Between Net Rating and New Net Rating in 2015 Season
@@ -507,14 +496,7 @@ Figure 2: Comparison Between Net Rating and New Net Rating in 2015 Season
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{new_nr_16.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{nr_16_summary.jpg}
-    \caption{2016 Season Using Net Rating}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{new_nr_16_summary.jpg}
-    \caption{2016 Season Using New Net Rating}
-  \end{subfigure}
+
 
 \bigskip
 
@@ -529,22 +511,14 @@ Figure 3: Comparison Between Net Rating and New Net Rating in 2016 Season
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{new_nr_17.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{nr_17_summary.jpg}
-    \caption{2017 Season Using Net Rating}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{new_nr_17_summary.jpg}
-    \caption{2017 Season Using New Net Rating}
-  \end{subfigure}
 
 \bigskip
 
 Figure 4: Comparison Between Net Rating and New Net Rating in 2017 Season
 \end{figure}
 
+\newpage
 \subsubsection*{TOEs from 2014-2017 Seasons}
-
 \begin{figure}[h!]
   \centering
   \begin{subfigure}[b]{0.45\linewidth}
@@ -553,40 +527,48 @@ Figure 4: Comparison Between Net Rating and New Net Rating in 2017 Season
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{14new.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{14oldsummary.jpg}
-    \caption{2015 Season Using Old TOE}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{14newsummary.jpg}
-    \caption{2014 Season Using New TOE}
-  \end{subfigure}
 \bigskip
 
 Figure 5: Comparision Between TOE and New TOE in 2014 Season
 
 \end{figure}
 
-
 \begin{figure}[h!]
   \centering
   \begin{subfigure}[b]{0.45\linewidth}
     \includegraphics[width=\linewidth]{15old.jpg}
   \end{subfigure}
-  \begin{subfigure}[b]{0.45\linewidth}
+  \begin{subfigure}[b]{0.43\linewidth}
     \includegraphics[width=\linewidth]{15new.jpg}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{15oldsummary.jpg}
-    \caption{2015 Season Using Old TOE}
-  \end{subfigure}
-  \begin{subfigure}[b]{0.42\linewidth}
-    \includegraphics[width=\linewidth]{14newsummary.jpg}
-    \caption{2015 Season Using New TOE}
   \end{subfigure}
 \bigskip
 
-Figure 6: Comparision Between TOE and New TOE in 2014 Season
-
+Figure 6: Comparision Between TOE and New TOE in 2015 Season
 \end{figure}
+\newpage	
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{16old.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{16new.jpg}
+  \end{subfigure}
+\bigskip
+
+Figure 7: Comparision Between TOE and New TOE in 2016 Season
+\end{figure}
+\begin{figure}[h!]
+  \centering
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{17old.jpg}
+  \end{subfigure}
+  \begin{subfigure}[b]{0.45\linewidth}
+    \includegraphics[width=\linewidth]{17new.jpg}
+  \end{subfigure}
+\bigskip
+
+Figure 8: Comparision Between TOE and New TOE in 2017 Season
+\end{figure}
+
 \end{document}
