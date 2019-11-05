@@ -4,13 +4,15 @@ import scrapy
 
 class RankCollectoSpider(scrapy.Spider):
 	name = 'rank_collecto'
-	start_urls = ['http://www.espn.com/nba/standings/_/season/2018/group/league']
-	# start_urls = ['http://www.espn.com/nba/standings/_/season/2014/group/league/',
-	#               'http://www.espn.com/nba/standings/_/season/2015/group/league/',
-	#               'http://www.espn.com/nba/standings/_/season/2016/group/league/',
-	#               'http://www.espn.com/nba/standings/_/season/2017/group/league/',
-	#               'http://www.espn.com/nba/standings/_/season/2018/group/league/',
-	#                ]
+
+	def __init__(self):
+		self.years = ['2010','2011','2012','2013','2014','2015','2016','2017','2018','2019']
+		self.league_sub_dir = '/group/league/'
+		self.domain = 'http://www.espn.com/nba/standings/_/season/'
+
+	def start_requests(self):
+	        for y in self.years:
+	            yield scrapy.Request(url=self.domain+y+self.league_sub_dir,callback = self.parse)
 
 	def parse(self, response):
 		team_names = response.xpath('//div[@class="flex"]/table/tbody/tr')
