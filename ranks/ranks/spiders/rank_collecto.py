@@ -4,17 +4,17 @@ import scrapy
 
 class RankCollectoSpider(scrapy.Spider):
 	name = 'rank_collecto'
-	# allowed_domains = ['www.espn.com/nba/standings/_/season/2018/group/league']
-	start_urls = ['http://www.espn.com/nba/standings/_/season/2014/group/league/',
-	              'http://www.espn.com/nba/standings/_/season/2015/group/league/',
-	              'http://www.espn.com/nba/standings/_/season/2016/group/league/',
-	              'http://www.espn.com/nba/standings/_/season/2017/group/league/',
-	              'http://www.espn.com/nba/standings/_/season/2018/group/league/',
-	               ]
+	start_urls = ['http://www.espn.com/nba/standings/_/season/2018/group/league']
+	# start_urls = ['http://www.espn.com/nba/standings/_/season/2014/group/league/',
+	#               'http://www.espn.com/nba/standings/_/season/2015/group/league/',
+	#               'http://www.espn.com/nba/standings/_/season/2016/group/league/',
+	#               'http://www.espn.com/nba/standings/_/season/2017/group/league/',
+	#               'http://www.espn.com/nba/standings/_/season/2018/group/league/',
+	#                ]
 
 	def parse(self, response):
-		team_names = response.xpath('//td[@class = "v-top"]/table/tbody/tr')
-		teams_stats = response.xpath('//td[@class = "v-top"]/div/div/div/table/tbody/tr/td/table/tbody/tr')
+		team_names = response.xpath('//div[@class="flex"]/table/tbody/tr')
+		teams_stats = response.xpath('//div[@class = "Table__Scroller"]/table/tbody/tr')
 
 		for n in range(0,30):
 			team_name = team_names[n].xpath('.//span[@class = "dn show-mobile"]/a/abbr/text()').extract()
